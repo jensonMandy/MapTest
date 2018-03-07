@@ -1,0 +1,88 @@
+<!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:map="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/map"-->
+    <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="com.metaphor.jenson.maptest.MapsActivity" />-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:weightSum="2"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.metaphor.jenson.maptest.MapsActivity" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/locationControllerGPS"
+                style="@android:style/DeviceDefault.Light.ButtonBar"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle"
+                android:elevation="@android:dimen/app_icon_size"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:shadowColor="#dddddd"
+                android:text="Find Me"
+                android:textColor="#ffffff"
+                android:textSize="21dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/continueNext"
+                style="@android:style/DeviceDefault.Light.ButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_button_draw"
+                android:elevation="@android:dimen/app_icon_size"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:shadowColor="#dddddd"
+                android:text="Continue"
+                android:textColor="#ffffff"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:onClick="passCoordinates"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
